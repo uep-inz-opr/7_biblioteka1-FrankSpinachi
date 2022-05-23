@@ -30,7 +30,7 @@ class Biblioteka:
             egzemplarze.append(tytuly.count(title))
 
         for book in self.lista_ksiazek:
-            wiersz = "('"+ book.tytul + "','"+ book.autor + "',"+ str(egzemplarze[index])+")"
+            wiersz = "('"+ book.tytul + "','"+ book.autor + "', "+ str(egzemplarze[index])+")"
             index += 1
             odpowiedz.append(wiersz)
 
