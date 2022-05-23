@@ -30,7 +30,7 @@ class Biblioteka:
             egzemplarze.append(tytuly.count(title))
 
         for book in self.lista_ksiazek:
-            wiersz = "('"+ book.tytul + " ','"+ book.autor + " ','"+ str(egzemplarze[index])+")"
+            wiersz = "('"+ book.tytul + "','"+ book.autor + "',"+ str(egzemplarze[index])+")"
             index += 1
             odpowiedz.append(wiersz)
 
@@ -41,13 +41,11 @@ class Biblioteka:
         for wiersz in odpowiedz:
             print(wiersz)
 
-
-
 b1 = Biblioteka()
 n = input()
 n = int(n)
 
-for num in range(n):
+for i in range(n):
     inp = input()
     book = inp.split('"')[1::2]
     rok = int(re.search(r'\d+', inp).group())
